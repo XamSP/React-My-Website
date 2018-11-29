@@ -30,6 +30,7 @@ class Navbar extends Component {
           <ul>
             <li>Welcome, {this.state.loggedInUser.username} from {this.state.loggedInUser.campus} studying {this.state.loggedInUser.course}</li>
             <li><Link to='/projects' style={{ textDecoration: 'none' }}>Projects</Link></li>
+            <li><Link to='/aboutme' style={{ textDecoration: 'none' }}>Projects</Link></li>
             <li><Link to='/edit' style={{ textDecoration: 'none' }}>Edit your profile</Link></li>
             <li>
               <Link to='/'>

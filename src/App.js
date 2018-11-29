@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import { Switch, Route } from 'react-router-dom';
 
+import AboutMe from './components/AboutMe';
 import ProjectList from './components/projects/ProjectList';
 import Navbar from './components/navbar/Navbar';
 import ProjectDetails from './components/projects/ProjectDetails';
@@ -50,6 +51,7 @@ class App extends Component {
           <Switch>
             <ProtectedRoute user={this.state.loggedInUser} path='/projects/:id' component={ProjectDetails} />
             <ProtectedRoute user={this.state.loggedInUser} path='/projects' component={ProjectList} />
+            <ProtectedRoute user={this.state.loggedInUser} path='/aboutme' component={AboutMe} />            
           </Switch>
         </div>
       );
@@ -62,6 +64,7 @@ class App extends Component {
               <Route exact path='/' render={() => <Login getUser={this.getTheUser}/>}/>
               <ProtectedRoute user={this.state.loggedInUser} path='/projects/:id' component={ProjectDetails} />
               <ProtectedRoute user={this.state.loggedInUser} path='/projects' component={ProjectList} />
+              <ProtectedRoute user={this.state.loggedInUser} path='/aboutme' component={AboutMe} />            
             </Switch>
         </div>
       );
